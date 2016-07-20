@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router';
 import Navigation from './Navigation.jsx';
 import dummyData from './dummyData.js';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
 
 // challenges data is temporarily living in this.state.challenges
 class App extends React.Component {
