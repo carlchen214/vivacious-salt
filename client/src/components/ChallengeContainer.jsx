@@ -13,6 +13,7 @@ class ChallengeContainer extends React.Component {
     const passedProps = {
       currentChallenge: this.props.currentChallenge,
       createChallenge: this.props.createChallenge,
+      signUpChallenge: this.props.signUpChallenge,
       currentUser: this.props.currentUser
     };
     // will need to pass props to children

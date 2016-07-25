@@ -2,10 +2,12 @@
 
 //Import actions here
 import { createChallenge } from './createChallenge';
+import { signUpChallenge } from './signUpChallenge';
+
 
 function exampleFUNCTION() {
   console.log("HEY");
 }
 
 
-export { createChallenge, exampleFUNCTION };
+export { createChallenge, exampleFUNCTION, signUpChallenge };

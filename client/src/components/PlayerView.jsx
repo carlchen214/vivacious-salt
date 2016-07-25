@@ -35,6 +35,7 @@ class PlayerView extends React.Component {
 
   handleSignUp() {
     console.log('handleSignUp')
+    this.props.signUpChallenge();
   }
 
   render() {
