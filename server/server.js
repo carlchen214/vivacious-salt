@@ -6,6 +6,7 @@ const FacebookStrategy = require('passport-facebook').Strategy;
 const pgClient = require('./db/connection.js');
 const passportFacebook = require('./passport.js');
 const session = require('express-session');
+const controllers = require('./db/controller/index.js');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -68,6 +69,9 @@ app.get('/users', function(req, res) {
 
 app.post('/signUpChallenge', function(req, res) {
   console.log(req.body);
+  // req.body is something like {username: ###, challengeId: ###}
+  // do something like challenge.accept of controller/index.js
+  controllers.challenge.accept(req, res)
   res.json('signed up challenge');
 })
 

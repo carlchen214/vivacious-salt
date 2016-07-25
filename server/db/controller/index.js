@@ -168,11 +168,14 @@ module.exports = {
     },
 
     accept: (req, res) => {
-      model.User.find({ where: { facebookId: req.user.id } })
+      // change userId temporarily 
+      model.User.find({ where: { facebookId: req.body.userId } })
       .then((user) => {
         model.Challenge.find({ where: { id: req.body.challengeId } })
           .then((challenge) => {
             challenge.increment(['challengers']);
+            // getting error when trying to create a row in Users_challenge, looks like userId and challengeId don't exist. added them for now
+            // Unhandled rejection SequelizeDatabaseError: column "userId" does not exist
             model.Users_challenge.create({
               userId: req.body.userId,
               challengeId: challenge.dataValues.id,
@@ -183,6 +186,7 @@ module.exports = {
                 usersChallengeId: usersChallenge.dataValues.id,
                 creatorAccepted: false,
               });
+              console.log('all created');
             });
           });
       });

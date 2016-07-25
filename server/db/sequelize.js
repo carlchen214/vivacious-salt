@@ -40,12 +40,17 @@ const Users_challenge = sequelize.define('users_challenge', {
     primaryKey: true,
     autoIncrement: true,
   },
-  timeAccepted: Sequelize.DATE,
+  userId: Sequelize.TEXT,
+  challengeId: Sequelize.TEXT,
+  timeAccepted: Sequelize.DATE
 });
 
 
 // proof model
-const Proof = sequelize.define('proof', { creatorAccepted: Sequelize.BOOLEAN }
+const Proof = sequelize.define('proof', { 
+  creatorAccepted: Sequelize.BOOLEAN,
+  usersChallengeId: Sequelize.TEXT 
+}
   , { freezeTableName: true });
 
 

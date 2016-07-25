@@ -11,7 +11,7 @@ export function signUpChallenge(currentUser, challengeId) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        username: currentUser,
+        userId: currentUser,
         challengeId: challengeId,
       })
     }).then(res => {

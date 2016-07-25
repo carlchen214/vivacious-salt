@@ -17,7 +17,7 @@ import dummyData from './components/dummyData';
 const defaultState = {
   // challengeList: dummyData.challenges,
   currentChallenge: dummyData.challenges[0],
-  currentUser: 'Bob',
+  currentUser: '12345', //facebook ID #? must be a string?
   index: 0
 };
 
