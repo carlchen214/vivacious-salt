@@ -17,7 +17,7 @@ import dummyData from './components/dummyData';
 const defaultState = {
   // challengeList: dummyData.challenges,
   currentChallenge: dummyData.challenges[0],
-  // currentChallenge: 1,
+  currentUser: 'Bob',
   index: 0
 };
 

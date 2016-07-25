@@ -66,6 +66,11 @@ app.get('/users', function(req, res) {
   res.json(data);
 });
 
+app.post('/signUpChallenge', function(req, res) {
+  console.log(req.body);
+  res.json('signed up challenge');
+})
+
 //https://github.com/reactjs/react-router-tutorial/tree/master/lessons/13-server-rendering
 app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, '/../client/public/index.html'));

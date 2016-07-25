@@ -36,7 +36,8 @@ function mapStateToProps(state) {
     entities: state.entities,
     currentChallenge: state.currentChallenge,
     challengeList: state.challengeList,
-    index: state.index
+    index: state.index,
+    currentUser: state.currentUser
   };
 }
 function mapDispatchToProps(dispatch) {

@@ -28,14 +28,12 @@ const imageStyle = {
 class PlayerView extends React.Component {
   constructor(props) {
     super(props)
-    console.log(props);
     this.handleSignUp = this.handleSignUp.bind(this);
-
   }
 
   handleSignUp() {
-    console.log('handleSignUp')
-    this.props.signUpChallenge();
+    console.log('currentuser', this.props.currentUser)
+    this.props.signUpChallenge(this.props.currentUser, this.props.params.challengeId);
   }
 
   render() {
